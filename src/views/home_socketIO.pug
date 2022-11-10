@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Noom
+        link(rel="stylesheet",href="https://unpkg.com/mvp.css@1.12/mvp.css")
+    body 
+        header
+            h1 OJ Zoom
+        main      
+            div#welcome
+                form#enter_room
+                    input(type="text", required, placeholder="nickname", id="inp_nickName")
+                    input(type="text", required, placeholder="room name", id="inp_roomName")
+                    button Enter Room
+
+            div#room 
+                h3 
+                ul#chatList
+                form#message
+                    input(type="text", required, placeholder="send a message")
+                    button Send
+
+            div#roomList
+                h3 Open Rooms
+                ul
+        script(src="/socket.io/socket.io.js") 
+        script(src="/public/js/app.js") 
