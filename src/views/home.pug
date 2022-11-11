@@ -9,22 +9,10 @@ html(lang="en")
     body 
         header
             h1 OJ Zoom
-        main      
-            div#welcome
-                form#enter_room
-                    input(type="text", required, placeholder="nickname", id="inp_nickName")
-                    input(type="text", required, placeholder="room name", id="inp_roomName")
-                    button Enter Room
-
-            div#room 
-                h3 
-                ul#chatList
-                form#message
-                    input(type="text", required, placeholder="send a message")
-                    button Send
-
-            div#roomList
-                h3 Open Rooms
-                ul
+        main
+            div#myStream
+                video#myFace(autoplay, playsinline, width="100%", height="auto")
+                button#mute Mute
+                button#camera Turn Camera Off
         script(src="/socket.io/socket.io.js") 
         script(src="/public/js/app.js") 
